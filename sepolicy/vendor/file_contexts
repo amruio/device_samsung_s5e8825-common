@@ -73,5 +73,3 @@
 
 ## Vendor
 /(vendor|system/vendor)/bin/hw/gps.sh        u:object_r:gpsd_exec:s0
-/(vendor|system/vendor)/bin/hw/vendor\.lineage\.biometrics\.fingerprint\.inscreen@1\.0-service\.a53 u:object_r:hal_lineage_fod_default_exec:s0
-/(vendor|system/vendor)/bin/hw/vendor\.samsung\.hardware\.biometrics\.fingerprint@2\.1-service\.a53 u:object_r:hal_fingerprint_default_exec:s0
