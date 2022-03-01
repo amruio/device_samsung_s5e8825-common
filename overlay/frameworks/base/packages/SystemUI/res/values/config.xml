@@ -20,7 +20,7 @@
     <integer name="config_chargingFastThreshold">10800000</integer>
 
     <!-- The radius of the enrollment progress bar, in dp -->
-    <integer name="config_udfpsEnrollProgressBar" translatable="false">110</integer>
+    <integer name="config_udfpsEnrollProgressBar" translatable="false">70</integer>
 
     <!-- Color of the FOD view -->
     <color name="config_udfpsColor">#00ff00ff</color>
