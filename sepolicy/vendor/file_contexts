@@ -73,3 +73,4 @@
 
 ## Vendor
 /(vendor|system/vendor)/bin/hw/gps.sh        u:object_r:gpsd_exec:s0
+/(vendor|system/vendor)/bin/hw/vendor\.samsung\.hardware\.biometrics\.fingerprint@[0-9]\.[0-9]-service\.a53 u:object_r:hal_fingerprint_default_exec:s0
