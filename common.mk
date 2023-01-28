@@ -57,7 +57,7 @@ TARGET_EXCLUDES_AUDIOFX := true
 
 # Biometric Fingerprint
 PRODUCT_PACKAGES += \
-    vendor.samsung.hardware.biometrics.fingerprint@3.0-service.a53
+     android.hardware.biometrics.fingerprint@2.3-service-samsung.a53
 
 # Bluetooth
 PRODUCT_PACKAGES += \
