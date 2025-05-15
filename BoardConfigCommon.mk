@@ -128,11 +128,9 @@ TARGET_USERIMAGES_USE_F2FS := true
 ## Graphics
 TARGET_USES_VULKAN := true
 
-# FOD
-TARGET_SURFACEFLINGER_UDFPS_LIB := //$(COMMON_PATH):libudfps_extension.a53
-
-# Display
+# UDFPS
 TARGET_ADDITIONAL_GRALLOC_10_USAGE_BITS := 0x2000U | 0x400000000LL
+$(call soong_config_set,surfaceflinger,udfps_lib,//$(COMMON_PATH):libudfps_extension.a53)
 
 ## Kernel
 BOARD_KERNEL_IMAGE_NAME := Image
