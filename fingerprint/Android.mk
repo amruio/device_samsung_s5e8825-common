@@ -29,6 +29,7 @@ LOCAL_SHARED_LIBRARIES := \
     libhidlbase \
     liblog \
     libutils \
+    libcutils \
     android.hardware.biometrics.fingerprint@2.1 \
     android.hardware.biometrics.fingerprint@2.2 \
     android.hardware.biometrics.fingerprint@2.3
@@ -55,7 +56,7 @@ endif
 
 LOCAL_MODULE := android.hardware.biometrics.fingerprint@2.3-service-samsung.a53
 LOCAL_CFLAGS += -DLOG_TAG="\"$(LOCAL_MODULE)\""
-LOCAL_INIT_RC := android.hardware.biometrics.fingerprint@2.3-service-samsung.a53
+LOCAL_INIT_RC := android.hardware.biometrics.fingerprint@2.3-service-samsung.a53.rc
 LOCAL_VINTF_FRAGMENTS := android.hardware.biometrics.fingerprint@2.3-service-samsung.a53.xml
 LOCAL_MODULE_RELATIVE_PATH := hw
 LOCAL_MODULE_TAGS := optional

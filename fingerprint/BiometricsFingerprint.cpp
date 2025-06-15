@@ -13,7 +13,6 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-#define LOG_TAG "vendor.samsung.hardware.biometrics.fingerprint@3.0-service.a53"
 
 #include <android-base/logging.h>
 
@@ -28,6 +27,7 @@
 #include <fstream>
 #include <inttypes.h>
 #include <unistd.h>
+#include <cutils/properties.h>
 
 #ifdef HAS_FINGERPRINT_GESTURES
 #include <fcntl.h>
@@ -117,6 +117,7 @@ Return<bool> BiometricsFingerprint::isUdfps(uint32_t) {
 }
 
 Return<void> BiometricsFingerprint::onFingerDown(uint32_t, uint32_t, float, float) {
+    property_set("vendor.finger.down", "1");
 
     std::thread([]() {
         std::this_thread::sleep_for(std::chrono::milliseconds(35));
