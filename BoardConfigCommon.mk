@@ -136,7 +136,7 @@ $(call soong_config_set,surfaceflinger,udfps_lib,//$(COMMON_PATH):libudfps_exten
 BOARD_KERNEL_IMAGE_NAME := Image
 TARGET_KERNEL_ADDITIONAL_FLAGS := TARGET_SOC=s5e8825 BRANCH=android12-5.10 KMI_GENERATION=9
 TARGET_KERNEL_NO_GCC := true
-TARGET_KERNEL_SOURCE := kernel/samsung/universal8825
+TARGET_KERNEL_SOURCE := kernel/samsung/s5e8825
 TARGET_KERNEL_CONFIG := s5e8825-unified_defconfig
 
 ## Kernel Modules
