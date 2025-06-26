@@ -54,10 +54,10 @@ ifeq ($(TARGET_SEC_FP_REQUEST_FORCE_CALIBRATE),true)
     LOCAL_CFLAGS += -DREQUEST_FORCE_CALIBRATE
 endif
 
-LOCAL_MODULE := android.hardware.biometrics.fingerprint@2.3-service-samsung.a53
+LOCAL_MODULE := android.hardware.biometrics.fingerprint@2.3-service-samsung.s5e8825
 LOCAL_CFLAGS += -DLOG_TAG="\"$(LOCAL_MODULE)\""
-LOCAL_INIT_RC := android.hardware.biometrics.fingerprint@2.3-service-samsung.a53.rc
-LOCAL_VINTF_FRAGMENTS := android.hardware.biometrics.fingerprint@2.3-service-samsung.a53.xml
+LOCAL_INIT_RC := android.hardware.biometrics.fingerprint@2.3-service-samsung.s5e8825.rc
+LOCAL_VINTF_FRAGMENTS := android.hardware.biometrics.fingerprint@2.3-service-samsung.s5e8825.xml
 LOCAL_MODULE_RELATIVE_PATH := hw
 LOCAL_MODULE_TAGS := optional
 LOCAL_MODULE_OWNER := samsung

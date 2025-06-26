@@ -13,10 +13,10 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
-COMMON_PATH := device/samsung/a53x-common
+COMMON_PATH := device/samsung/s5e8825-common
 
 ## Inherit proprietary vendor configuartion
-include vendor/samsung/a53x-common/BoardConfigVendor.mk
+include vendor/samsung/s5e8825-common/BoardConfigVendor.mk
 
 # TEMP
 BUILD_BROKEN_PREBUILT_ELF_FILES := true
@@ -37,7 +37,7 @@ TARGET_2ND_CPU_VARIANT := generic
 
 ## Audio
 $(call soong_config_set,exynos_audio,PREDEFINED_LOW_CAPTURE_DURATION,20)
-$(call soong_config_set,exynos_audio,PROXY_LIBRARY,//device/samsung/a53x-common:libaudioproxy)
+$(call soong_config_set,exynos_audio,PROXY_LIBRARY,//device/samsung/s5e8825-common:libaudioproxy)
 
 ## Bluetooth
 BOARD_HAVE_BLUETOOTH_SLSI := true
@@ -128,9 +128,8 @@ TARGET_USERIMAGES_USE_F2FS := true
 ## Graphics
 TARGET_USES_VULKAN := true
 
-# UDFPS
+# Display
 TARGET_ADDITIONAL_GRALLOC_10_USAGE_BITS := 0x2000U | 0x400000000LL
-$(call soong_config_set,surfaceflinger,udfps_lib,//$(COMMON_PATH):libudfps_extension.a53)
 
 ## Kernel
 BOARD_KERNEL_IMAGE_NAME := Image
@@ -202,6 +201,11 @@ include device/lineage/sepolicy/exynos/sepolicy.mk
 include device/samsung_slsi/sepolicy/sepolicy.mk
 
 BOARD_VENDOR_SEPOLICY_DIRS += $(COMMON_PATH)/sepolicy/vendor
+
+# UDFPS
+ifeq ($(TARGET_HAS_UDFPS),true)
+$(call soong_config_set,surfaceflinger,udfps_lib,//$(COMMON_PATH):libudfps_extension.s5e8825)
+endif
 
 ## USB
 $(call soong_config_set,samsungUsbGadgetVars,gadget_name,13200000.dwc3)
