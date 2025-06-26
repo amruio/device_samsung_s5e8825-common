@@ -259,6 +259,17 @@ PRODUCT_PACKAGES += \
 AB_OTA_UPDATER := false
 PRODUCT_SOONG_NAMESPACES += bootable/deprecated-ota
 
+ifeq ($(TARGET_HAS_UDFPS),true)
+# UDFPS
+PRODUCT_PACKAGES += \
+    android.hardware.biometrics.fingerprint@2.3-service-samsung.s5e8825 \
+    sensors.samsung \
+    UdfpsHandler_s5e8825
+
+PRODUCT_COPY_FILES += \
+    $(COMMON_PATH)/configs/sensors/hals.conf:$(TARGET_COPY_OUT_VENDOR)/etc/sensors/hals.conf
+endif
+
 # USB
 PRODUCT_PACKAGES += \
     android.hardware.usb-service.samsung \
